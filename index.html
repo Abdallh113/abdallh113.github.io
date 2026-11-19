@@ -384,7 +384,7 @@ document.addEventListener("click",function(e){
  var v=e.target.closest("[data-via]");if(v)send(v.dataset.via)});
 document.addEventListener("input",function(e){if(e.target.closest("#of"))sync()});
 document.addEventListener("change",function(e){if(e.target.closest("#of"))sync()});
-if(window.DBP)window.DBP.then(function(a){if(a)a.visit().then(function(n){document.getElementById("vis").textContent="زوار اليوم: "+n})}).catch(function(){});
+window.addEventListener("load",function(){if(window.DBP)window.DBP.then(function(a){if(a)a.visit().then(function(n){document.getElementById("vis").textContent="زوار اليوم: "+n})}).catch(function(){});});
 })();
 </script>
 </body>
