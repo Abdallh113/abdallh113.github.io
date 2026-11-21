@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102f70"><title>لوحة إدارة AMR_X</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#12377f;--blue:#1d4fa4;--orange:#f59a19;--ink:#15243b;--muted:#728096;--line:#e4eaf2;--bg:#f4f7fc;--white:#fff;--green:#0e9f6e;--red:#d94848;--shadow:0 14px 40px rgba(20,45,90,.08)}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Tajawal,Arial,sans-serif;color:var(--ink)}button,input,textarea,select{font:inherit}.layout{min-height:100vh;display:grid;grid-template-columns:255px 1fr}.side{background:linear-gradient(165deg,#102c68,#174b9b);color:#fff;padding:25px 18px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 22px;border-bottom:1px solid #ffffff25}.mark{font:900 26px Arial;color:white;letter-spacing:-1px}.mark i{color:var(--orange);font-style:normal}.brand small{display:block;color:#b9c9e8;font-size:10px;letter-spacing:2px}.nav{display:grid;gap:8px}.nav button{border:0;background:transparent;color:#dce7fa;text-align:right;padding:13px 14px;border-radius:12px;cursor:pointer;font-weight:600}.nav button.active,.nav button:hover{background:#ffffff1b;color:#fff}.side-foot{margin-top:auto;color:#b9c9e8;font-size:12px;line-height:1.8}.main{min-width:0;padding:26px clamp(16px,3vw,42px) 50px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:26px}.top h1{margin:0;font-size:27px;font-weight:800}.top p{margin:3px 0 0;color:var(--muted)}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:0;border-radius:11px;padding:11px 16px;background:var(--navy);color:white;font-weight:700;cursor:pointer}.btn.light{background:#eaf0fb;color:var(--navy)}.btn.orange{background:var(--orange);color:#17243a}.btn.danger{background:#fff0f0;color:var(--red)}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:22px}.stat,.panel{background:var(--white);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.stat{padding:18px}.stat span{color:var(--muted);font-size:13px}.stat strong{display:block;font:800 27px Arial;margin-top:8px;color:var(--navy)}.panel{padding:20px;margin-bottom:18px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.panel h2{font-size:19px;margin:0;font-weight:800}.muted{color:var(--muted);font-size:13px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}.field{display:grid;gap:6px;min-width:0}.field label{font-size:13px;color:#52627a;font-weight:700}.field input,.field textarea,.field select,.search{width:100%;border:1px solid #dce4ef;border-radius:10px;padding:11px 12px;background:#fff;outline:none;color:var(--ink)}.field input:focus,.field textarea:focus,.search:focus{border-color:#6b91d2;box-shadow:0 0 0 3px #1d4fa41a}.search{max-width:310px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:right;padding:13px 10px;border-bottom:1px solid var(--line);font-size:14px}th{color:#64748b;font-size:12px;background:#f8faff}td strong{font-weight:800}.tag{display:inline-block;border-radius:99px;padding:4px 9px;background:#e9f7f1;color:var(--green);font-size:11px;font-weight:700}.tag.off{background:#fff2e3;color:#a8660a}.actions{display:flex;gap:6px;flex-wrap:wrap}.mini{border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:8px;padding:6px 9px;cursor:pointer;font-size:12px;font-weight:700}.mini.del{color:var(--red)}.settings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.settings .wide{grid-column:1/-1}.empty{padding:30px;text-align:center;color:var(--muted)}.note{border:1px solid #f0d8a8;background:#fff9ed;color:#805510;padding:14px 16px;border-radius:12px;font-size:13px;line-height:1.9;margin-bottom:18px}.modal{position:fixed;inset:0;background:#081a35a6;display:none;align-items:center;justify-content:center;padding:16px;z-index:5}.modal.open{display:flex}.dialog{background:#fff;border-radius:18px;padding:22px;width:min(560px,100%);max-height:90vh;overflow:auto;box-shadow:0 25px 80px #06152b55}.dialog h2{margin:0 0 18px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formgrid .wide{grid-column:1/-1}.dialog-foot{display:flex;justify-content:flex-start;gap:8px;margin-top:18px}.hidden{display:none!important}.toast{position:fixed;bottom:20px;left:20px;background:#142f67;color:#fff;padding:12px 18px;border-radius:12px;box-shadow:var(--shadow);display:none;z-index:10}.toast.show{display:block}@media(max-width:900px){.layout{grid-template-columns:1fr}.side{padding:12px 14px;gap:10px}.brand{padding:0 5px 10px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;padding:9px 13px}.side-foot{display:none}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.main{padding-top:20px}}@media(max-width:560px){.top{align-items:flex-start;flex-direction:column}.top h1{font-size:23px}.stats{gap:9px}.stat{padding:14px}.stat strong{font-size:22px}.settings,.formgrid{grid-template-columns:1fr}.formgrid .wide,.settings .wide{grid-column:auto}.panel{padding:15px}}
+
+.status-summary{display:flex;gap:9px;flex-wrap:wrap}.status-pill{display:inline-flex;align-items:center;border-radius:999px;padding:8px 13px;font-weight:800;font-size:13px}.status-pill.success{background:#e7f8ef;color:#087443}.status-pill.progress{background:#e8f1ff;color:#1d4fa4}.status-pill.incomplete{background:#fff3df;color:#a65c00}.status-pill.failed{background:#ffebeb;color:#bd3030}.status-select{border:1px solid #dce4ef;border-radius:9px;padding:7px 9px;font-weight:700}.status-select.completed{background:#e7f8ef;color:#087443;border-color:#b8ebce}.status-select.progress{background:#e8f1ff;color:#1d4fa4;border-color:#c6dcff}.status-select.incomplete{background:#fff3df;color:#a65c00;border-color:#f5d7a5}.status-select.failed{background:#ffebeb;color:#bd3030;border-color:#ffcaca}.brand-preview{margin-top:22px;background:linear-gradient(135deg,#102c68,#174b9b);border-radius:18px;padding:28px;color:#fff;display:flex;flex-direction:column;align-items:center;gap:7px}.brand-preview strong{font:900 34px Arial;letter-spacing:-1px}.brand-preview strong span{color:#f59a19}.brand-preview strong i{font-style:normal;color:#fff}.brand-preview small{letter-spacing:3px;color:#d6e4ff}.row-detail{max-width:260px;white-space:normal;line-height:1.6;color:#64748b;font-size:12px}.empty{padding:26px;text-align:center;color:var(--muted)}
+
+/* AMR_X MOBILE-FIRST EXPERIENCE */
+@media (max-width: 700px) {
+  html { -webkit-text-size-adjust: 100%; }
+  body { padding-bottom: 82px; background: #f3f6fb; }
+  .layout { display: block; min-height: 100dvh; }
+  .side {
+    position: relative; top: auto; z-index: 2;
+    padding: 12px 15px 10px; gap: 0;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 5px 18px rgba(10,35,80,.15);
+  }
+  .brand { padding: 3px 2px 10px; gap: 10px; border: 0; }
+  .mark { font-size: 24px; }
+  .brand b { font-size: 15px; }
+  .brand small { font-size: 9px; letter-spacing: 1.4px; }
+  .nav {
+    position: fixed; z-index: 20; bottom: 0; right: 0; left: 0;
+    display: flex; flex-wrap: nowrap; gap: 3px; overflow-x: auto;
+    padding: 7px 6px calc(7px + env(safe-area-inset-bottom));
+    background: #102c68; box-shadow: 0 -5px 22px rgba(10,30,65,.18);
+    scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav button {
+    flex: 0 0 auto; min-width: 70px; min-height: 52px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; white-space: nowrap; padding: 8px 10px;
+    border-radius: 10px; font-size: 12px;
+  }
+  .nav button.active { background: #ffffff24; box-shadow: inset 0 -2px 0 var(--orange); }
+  .side-foot { display: none; }
+  .main { padding: 16px 12px 28px; }
+  .top { display: block; margin-bottom: 16px; }
+  .top h1 { font-size: 22px; line-height: 1.35; }
+  .top p { font-size: 12px; line-height: 1.7; }
+  .top-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+  .top-actions .btn { min-height: 43px; padding: 10px 8px; font-size: 12px; text-align: center; }
+  .stats { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; margin-bottom: 12px; }
+  .stat { padding: 13px 12px; border-radius: 14px; min-width: 0; }
+  .stat span { font-size: 11px; line-height: 1.5; }
+  .stat strong { font-size: 23px; margin-top: 5px; }
+  .panel { padding: 14px 12px; border-radius: 15px; margin-bottom: 12px; }
+  .panel-head { align-items: flex-start; flex-wrap: wrap; gap: 9px; margin-bottom: 13px; }
+  .panel h2 { font-size: 17px; }
+  .panel-head .btn { min-height: 40px; padding: 9px 11px; font-size: 12px; }
+  .toolbar { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .search { max-width: none; min-height: 44px; font-size: 14px; }
+  .field input, .field textarea, .field select, .search,
+  .status-select { min-height: 44px; font-size: 16px; }
+  .settings, .formgrid { grid-template-columns: 1fr; gap: 12px; }
+  .settings .wide, .formgrid .wide { grid-column: auto; }
+  .btn { min-height: 44px; padding: 11px 14px; }
+  .note { padding: 12px; font-size: 12px; line-height: 1.8; }
+  /* Convert wide desktop tables into readable mobile cards */
+  .table-wrap { overflow: visible; }
+  table { min-width: 0; width: 100%; border-collapse: separate; border-spacing: 0 9px; }
+  thead { display: none; }
+  tbody { display: block; width: 100%; }
+  tbody tr {
+    display: block; background: #fff; border: 1px solid var(--line);
+    border-radius: 13px; padding: 7px 11px; margin-bottom: 9px;
+    box-shadow: 0 4px 13px rgba(20,45,90,.045);
+  }
+  tbody td {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 12px; width: 100%; min-width: 0; padding: 9px 2px;
+    border-bottom: 1px solid #edf1f6; font-size: 13px; overflow-wrap: anywhere;
+  }
+  tbody td:last-child { border-bottom: 0; padding-bottom: 5px; }
+  tbody td::before {
+    flex: 0 0 92px; color: #718096; font-size: 11px; font-weight: 800;
+    content: "";
+  }
+  #productRows td:nth-child(1)::before { content: "المنتج"; }
+  #productRows td:nth-child(2)::before { content: "معرّف الخدمة"; }
+  #productRows td:nth-child(3)::before { content: "السعر"; }
+  #productRows td:nth-child(4)::before { content: "الحالة"; }
+  #productRows td:nth-child(5)::before { content: "الإجراءات"; }
+  #ticketRows td:nth-child(1)::before { content: "رقم التذكرة"; }
+  #ticketRows td:nth-child(2)::before { content: "العميل"; }
+  #ticketRows td:nth-child(3)::before { content: "الموضوع"; }
+  #ticketRows td:nth-child(4)::before { content: "التاريخ"; }
+  #ticketRows td:nth-child(5)::before { content: "الحالة"; }
+  #ticketRows td:nth-child(6)::before { content: "إجراء"; }
+  #messageRows td:nth-child(1)::before { content: "المرسل"; }
+  #messageRows td:nth-child(2)::before { content: "الموضوع"; }
+  #messageRows td:nth-child(3)::before { content: "الرسالة"; }
+  #messageRows td:nth-child(4)::before { content: "التاريخ"; }
+  #messageRows td:nth-child(5)::before { content: "الحالة"; }
+  #messageRows td:nth-child(6)::before { content: "إجراء"; }
+  tbody td[colspan] { display: block; text-align: center; }
+  tbody td[colspan]::before { content: none !important; }
+  .actions { justify-content: flex-start; }
+  .mini { min-height: 36px; padding: 7px 10px; font-size: 12px; }
+  .status-select { width: auto; max-width: 170px; padding: 7px 8px; font-size: 13px; }
+  .row-detail { max-width: 65%; }
+  .modal { align-items: flex-end; padding: 0; }
+  .dialog {
+    width: 100%; max-height: 88dvh; overflow-y: auto;
+    border-radius: 20px 20px 0 0; padding: 20px 15px calc(18px + env(safe-area-inset-bottom));
+  }
+  .dialog h2 { font-size: 19px; }
+  .dialog-foot { position: sticky; bottom: -18px; background: #fff; padding: 12px 0 2px; }
+  .dialog-foot .btn { flex: 1; }
+  .brand-preview { margin-top: 16px; padding: 22px 12px; }
+  .brand-preview strong { font-size: 30px; }
+  .toast { bottom: 90px; left: 12px; right: 12px; text-align: center; }
+}
+@media (max-width: 360px) {
+  .main { padding-right: 9px; padding-left: 9px; }
+  .nav button { min-width: 64px; padding-inline: 7px; font-size: 11px; }
+  .top-actions { grid-template-columns: 1fr; }
+  tbody td::before { flex-basis: 78px; }
+  .actions { flex-wrap: wrap; }
+}
+
+</style></head>
+<body>
+<div class="layout">
+<aside class="side"><div class="brand"><div class="mark">AMR<span>_</span><i>X</i></div><div><b>لوحة الإدارة</b><small>ABU AMMAR DIGITAL</small></div></div>
+<nav class="nav"><button class="active" data-tab="dashboard">نظرة عامة</button><button data-tab="tickets">التذاكر والدعم</button><button data-tab="messages">المراسلات</button><button data-tab="products">المنتجات والخدمات</button><button data-tab="settings">إعدادات الموقع</button><button data-tab="brand">هوية الموقع</button><button data-tab="backup">نسخ واستيراد</button></nav>
+<div class="side-foot">AMR_X DIGITAL STORE<br>إدارة كتالوج المتجر وتصدير تحديثاته</div></aside>
+<main class="main">
+<header class="top"><div><h1 id="pageTitle">نظرة عامة</h1><p>إدارة متجر أبو عمار للرقمنة والحلول البرمجية</p></div><div class="top-actions"><a class="btn light" href="index.html" style="text-decoration:none">عرض المتجر</a><button class="btn" id="exportTop">تصدير تحديث الموقع</button></div></header>
+<div class="note"><b>تنبيه مهم:</b> موقعك مستضاف على GitHub Pages، لذلك هذه اللوحة تجهّز ملف تحديث للمنتجات والأسعار. بعد التعديل اضغط «تصدير» ثم ارفع ملف <b>amrx-store-data.json</b> إلى نفس مجلد <b>index.html</b> في GitHub. التعديلات لا تُنشر للزوار بمجرد حفظها داخل اللوحة.</div>
+<section data-page="dashboard">
+<div class="stats"><div class="stat"><span>إجمالي المنتجات</span><strong id="countAll">0</strong></div><div class="stat"><span>المنتجات الظاهرة</span><strong id="countVisible">0</strong></div><div class="stat"><span>التذاكر المفتوحة</span><strong id="ticketOpenCount">0</strong></div><div class="stat"><span>المراسلات الواردة</span><strong id="messageCount">0</strong></div></div>
+<div class="panel"><div class="panel-head"><h2>إجراءات سريعة</h2><span class="muted">إدارة عمليات AMR_X</span></div><div class="toolbar"><button class="btn" id="newFromHome">+ إضافة منتج</button><button class="btn light" id="goProducts">إدارة المنتجات</button><button class="btn orange" id="exportHome">تنزيل ملف التحديث</button></div><p class="muted">يمكنك تعديل أسماء الخدمات، الوصف، شارة العرض، السعر أو عبارة «اطلب السعر»، وإخفاء المنتجات أو إظهارها.</p></div>
+</section>
+<section data-page="tickets" class="hidden"><div class="panel"><div class="panel-head"><h2>التذاكر والدعم الفني</h2><button class="btn" id="addTicket">+ تذكرة جديدة</button></div><div class="toolbar"><input class="search" id="ticketSearch" placeholder="ابحث برقم التذكرة أو العميل..."><select id="ticketFilter" class="search"><option value="all">كل الحالات</option><option value="completed">مكتمل / ناجح</option><option value="progress">قيد التنفيذ</option><option value="incomplete">غير مكتمل</option><option value="failed">فشل</option></select></div><div class="table-wrap"><table><thead><tr><th>رقم التذكرة</th><th>العميل</th><th>الموضوع</th><th>التاريخ</th><th>الحالة</th><th>إجراء</th></tr></thead><tbody id="ticketRows"></tbody></table></div></div></section>
+<section data-page="messages" class="hidden"><div class="panel"><div class="panel-head"><h2>المراسلات وصندوق الوارد</h2><button class="btn" id="addMessage">+ مراسلة جديدة</button></div><div class="toolbar"><input class="search" id="messageSearch" placeholder="ابحث في المراسلات..."><select id="messageFilter" class="search"><option value="all">كل المراسلات</option><option value="unread">غير مقروءة</option><option value="read">مقروءة</option><option value="replied">تم الرد</option></select></div><div class="table-wrap"><table><thead><tr><th>المرسل</th><th>الموضوع</th><th>الرسالة</th><th>التاريخ</th><th>الحالة</th><th>إجراء</th></tr></thead><tbody id="messageRows"></tbody></table></div></div></section>
+<section data-page="products" class="hidden"><div class="panel"><div class="panel-head"><h2>المنتجات والخدمات</h2><button class="btn" id="addProduct">+ إضافة منتج جديد</button></div><div class="toolbar"><input class="search" id="search" placeholder="ابحث عن منتج أو خدمة..."><span class="muted" id="resultCount"></span></div><div class="table-wrap"><table><thead><tr><th>المنتج</th><th>معرّف الخدمة</th><th>السعر / العبارة</th><th>الحالة</th><th>الإجراءات</th></tr></thead><tbody id="productRows"></tbody></table></div></div></section>
+<section data-page="settings" class="hidden"><div class="panel"><div class="panel-head"><h2>إعدادات المتجر</h2><span class="muted">تظهر بعد نشر ملف التحديث</span></div><div class="settings"><div class="field"><label>اسم المتجر</label><input id="storeName"></div><div class="field"><label>سعر الدولار مقابل الجنيه السوداني</label><input id="rate" type="number" min="1"></div><div class="field"><label>رقم واتساب الدولي بدون +</label><input id="phone" inputmode="numeric"></div><div class="field"><label>وصف المتجر</label><input id="description"></div><div class="wide"><button class="btn" id="saveSettings">حفظ الإعدادات</button></div></div></div></section>
+<section data-page="brand" class="hidden"><div class="panel"><div class="panel-head"><h2>هوية الموقع AMR_X</h2><span class="muted">إعدادات العلامة التجارية</span></div><div class="settings"><div class="field"><label>اسم العلامة</label><input id="brandName" value="AMR_X"></div><div class="field"><label>العبارة التعريفية</label><input id="brandTagline" value="TECH • DIGITAL • SOLUTIONS"></div><div class="field"><label>اللون الأساسي</label><input id="brandPrimary" type="color" value="#12377f"></div><div class="field"><label>اللون الثانوي</label><input id="brandAccent" type="color" value="#f59a19"></div><div class="field wide"><label>رابط الشعار (اختياري)</label><input id="brandLogo" placeholder="https://... رابط صورة الشعار"></div><div class="wide"><button class="btn" id="saveBrand">حفظ الهوية</button></div></div><div class="brand-preview" id="brandPreview"><strong>AMR<span>_</span><i>X</i></strong><small>TECH • DIGITAL • SOLUTIONS</small></div></div></section>
+<section data-page="backup" class="hidden"><div class="panel"><div class="panel-head"><h2>نسخ احتياطي ونشر التحديث</h2></div><p class="muted">نزّل ملف JSON الذي يحتوي على المنتجات والإعدادات. ارفعه إلى مستودع GitHub بجانب index.html، مع استبدال النسخة القديمة.</p><div class="toolbar"><button class="btn" id="exportBackup">تنزيل amrx-store-data.json</button><label class="btn light" for="importFile" style="cursor:pointer">استيراد نسخة JSON</label><input class="hidden" type="file" id="importFile" accept="application/json,.json"></div><div class="note">لا ترفع كلمات مرور أو مفاتيح سرية في هذا الملف. التذاكر والمراسلات في هذه النسخة تُحفظ محلياً في متصفح هذا الجهاز فقط. استقبال رسائل العملاء من الموقع ومزامنتها بين الأجهزة يحتاج ربط قاعدة بيانات وخدمة خلفية وتسجيل دخول آمن.</div></div></section>
+</main></div>
+<div class="modal" id="modal"><div class="dialog"><h2 id="modalTitle">إضافة منتج</h2><div class="formgrid"><div class="field wide"><label>اسم المنتج</label><input id="pTitle" maxlength="100"></div><div class="field wide"><label>وصف المنتج</label><input id="pDesc" maxlength="180"></div><div class="field"><label>معرّف الخدمة (إنجليزي)</label><input id="pId" placeholder="مثال: ad_new_service" maxlength="40"></div><div class="field"><label>شارة العرض (اختياري)</label><input id="pBadge" placeholder="عرض خاص"></div><div class="field"><label>السعر أو العبارة</label><input id="pPrice" value="اطلب السعر"></div><div class="field"><label>رابط صورة مباشر (اختياري)</label><input id="pImage" placeholder="https://..."></div><div class="field wide"><label><input type="checkbox" id="pVisible" checked style="width:auto"> إظهار المنتج في المتجر</label></div></div><div class="dialog-foot"><button class="btn" id="saveProduct">حفظ المنتج</button><button class="btn light" id="cancelModal">إلغاء</button></div></div></div>
+<div class="modal" id="ticketModal"><div class="dialog"><h2>إضافة تذكرة</h2><div class="formgrid"><div class="field"><label>اسم العميل</label><input id="tCustomer"></div><div class="field"><label>رقم التواصل</label><input id="tContact"></div><div class="field wide"><label>موضوع التذكرة</label><input id="tSubject"></div><div class="field wide"><label>تفاصيل الطلب</label><textarea id="tDetails" rows="3"></textarea></div><div class="field"><label>الحالة</label><select id="tStatus"><option value="progress">قيد التنفيذ</option><option value="completed">مكتمل / ناجح</option><option value="incomplete">غير مكتمل</option><option value="failed">فشل</option></select></div></div><div class="dialog-foot"><button class="btn" id="saveTicket">حفظ التذكرة</button><button class="btn light" id="closeTicket">إلغاء</button></div></div></div>
+<div class="modal" id="messageModal"><div class="dialog"><h2>إضافة مراسلة</h2><div class="formgrid"><div class="field"><label>اسم المرسل</label><input id="mSender"></div><div class="field"><label>وسيلة التواصل</label><input id="mContact"></div><div class="field wide"><label>الموضوع</label><input id="mSubject"></div><div class="field wide"><label>نص الرسالة</label><textarea id="mBody" rows="4"></textarea></div><div class="field"><label>الحالة</label><select id="mStatus"><option value="unread">غير مقروءة</option><option value="read">مقروءة</option><option value="replied">تم الرد</option></select></div></div><div class="dialog-foot"><button class="btn" id="saveMessage">حفظ المراسلة</button><button class="btn light" id="closeMessage">إلغاء</button></div></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id);let data={version:1,brand:'AMR_X',settings:{storeName:'متجر أبو عمار الرقمي',description:'خدمات رقمية واشتراكات وحلول برمجية',rate:12500,phone:'249961270800'},products:[],tickets:[],messages:[],brandSettings:{name:'AMR_X',tagline:'TECH • DIGITAL • SOLUTIONS',primary:'#12377f',accent:'#f59a19',logo:''}};let editing=null;
+const seed=[
+['ad_bybit','فيزا باي بيت Bybit','بطاقة وخدمات Bybit','','اطلب السعر'],['ad_bein_check','فحص كرت beIN Sports السوداني','خدمة فحص الاشتراك والكرت','','اطلب السعر'],['ad_linkedin_3','اشتراك LinkedIn Premium','اشتراك 3 شهور · خصم 75%','خصم 75%','اطلب السعر'],['ad_chatgpt_pro','اشتراك ChatGPT Pro','اشتراك شهر · خصم يصل إلى 90% حسب العرض','عرض خاص','اطلب السعر'],['ad_telegram','تفعيل تيليجرام في السودان','تفعيل ومساعدة في خدمات تيليجرام','','اطلب السعر'],['ad_redotpay_card','بطاقة افتراضية RedotPay','إصدار بطاقة افتراضية','','اطلب السعر'],['ad_pyypl','شحن فيزا Pyypl','شحن رصيد بطاقة Pyypl','','اطلب السعر'],['ad_binance','شحن Binance','شحن رصيد وخدمات Binance','','اطلب السعر'],['ad_redotpay','شحن فيزا RedotPay','شحن رصيد RedotPay','','اطلب السعر'],['ad_perplexity','اشتراك Perplexity Pro','اشتراك Pro · خصم 50% حسب العرض','خصم 50%','اطلب السعر'],['ad_nordvpn','اشتراك NordVPN','اشتراك لمدة 3 شهور','3 شهور','اطلب السعر'],['ad_bein_6','اشتراك beIN Sports 6','اشتراك لمدة 6 شهور','6 شهور','اطلب السعر'],['ad_bein_3','اشتراك beIN Sports 3','اشتراك لمدة 3 شهور','3 شهور','اطلب السعر'],['ad_gemini_nano','اشتراك Gemini Pro Nano','باقة Gemini Pro Nano والخدمات المرفقة بالإعلان','','اطلب السعر'],['ad_chatgpt_plus','اشتراك ChatGPT Plus','اشتراك لمدة شهر','شهر','اطلب السعر'],['ad_gemini_ultra','اشتراك Gemini AI Ultra','اشتراك لمدة شهر','شهر','اطلب السعر'],['ad_bein_12','اشتراك beIN Sports 12','اشتراك لمدة 12 شهر','12 شهر','اطلب السعر'],['ad_linkedin_1','اشتراك LinkedIn Premium','اشتراك لمدة شهر','شهر','اطلب السعر']
+].map(x=>({id:x[0],title:x[1],description:x[2],badge:x[3],priceLabel:x[4],visible:true,image:null}));
+function toast(t){$('toast').textContent=t;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2600)}
+function cleanId(v){return /^[a-z][a-z0-9_]{2,39}$/.test(v)}
+function load(){try{let raw=localStorage.getItem('amrx_admin_data');if(raw)data=JSON.parse(raw);else data.products=seed; if(!Array.isArray(data.products))data.products=seed}catch(e){data.products=seed}data.tickets=Array.isArray(data.tickets)?data.tickets:[];data.messages=Array.isArray(data.messages)?data.messages:[];data.brandSettings=Object.assign({name:'AMR_X',tagline:'TECH • DIGITAL • SOLUTIONS',primary:'#12377f',accent:'#f59a19',logo:''},data.brandSettings||{});data.settings=Object.assign({storeName:'متجر أبو عمار الرقمي',description:'خدمات رقمية واشتراكات وحلول برمجية',rate:12500,phone:'249961270800'},data.settings||{});fillSettings();fillBrand();render()}
+function persist(){localStorage.setItem('amrx_admin_data',JSON.stringify(data));render()}
+function fillSettings(){$('storeName').value=data.settings.storeName;$('description').value=data.settings.description;$('rate').value=data.settings.rate;$('phone').value=data.settings.phone}
+function render(){let all=data.products.length,vis=data.products.filter(p=>p.visible!==false).length;$('countAll').textContent=all;$('countVisible').textContent=vis;$('countHidden').textContent=all-vis;$('rateStat').textContent=Number(data.settings.rate||0).toLocaleString('en-US');let q=($('search')?.value||'').trim().toLowerCase();let rows=data.products.filter(p=>(p.title+' '+p.id).toLowerCase().includes(q));$('resultCount').textContent=rows.length+' منتج';$('productRows').innerHTML=rows.map(p=>`<tr><td><strong>${esc(p.title)}</strong><div class="muted">${esc(p.description||'')}</div></td><td dir="ltr">${esc(p.id)}</td><td>${esc(p.priceLabel||'اطلب السعر')}</td><td><span class="tag ${p.visible===false?'off':''}">${p.visible===false?'مخفي':'ظاهر'}</span></td><td><div class="actions"><button class="mini" data-edit="${esc(p.id)}">تعديل</button><button class="mini" data-toggle="${esc(p.id)}">${p.visible===false?'إظهار':'إخفاء'}</button><button class="mini del" data-delete="${esc(p.id)}">حذف</button></div></td></tr>`).join('')||'<tr><td colspan="5" class="empty">لا توجد منتجات مطابقة.</td></tr>';renderTickets();renderMessages();let ts=data.tickets;$('ticketOpenCount').textContent=ts.filter(t=>t.status==='progress'||t.status==='incomplete').length;$('messageCount').textContent=data.messages.length;$('doneCount').textContent='مكتمل: '+ts.filter(t=>t.status==='completed').length;$('progressCount').textContent='قيد التنفيذ: '+ts.filter(t=>t.status==='progress').length;$('incompleteCount').textContent='غير مكتمل: '+ts.filter(t=>t.status==='incomplete').length;$('failedCount').textContent='فشل: '+ts.filter(t=>t.status==='failed').length}
+const statusNames={completed:'مكتمل / ناجح',progress:'قيد التنفيذ',incomplete:'غير مكتمل',failed:'فشل'};
+function renderTickets(){let q=($('ticketSearch')?.value||'').toLowerCase(),f=$('ticketFilter')?.value||'all';let a=data.tickets.filter(t=>(f==='all'||t.status===f)&&[t.id,t.customer,t.subject,t.contact].join(' ').toLowerCase().includes(q));$('ticketRows').innerHTML=a.map(t=>`<tr><td dir="ltr">${esc(t.id)}</td><td><strong>${esc(t.customer)}</strong><div class="muted">${esc(t.contact||'')}</div></td><td><strong>${esc(t.subject)}</strong><div class="row-detail">${esc(t.details||'')}</div></td><td>${esc(t.date)}</td><td><select class="status-select ${t.status}" data-ticket-status="${esc(t.id)}">${Object.entries(statusNames).map(([k,v])=>`<option value="${k}" ${t.status===k?'selected':''}>${v}</option>`).join('')}</select></td><td><button class="mini del" data-ticket-delete="${esc(t.id)}">حذف</button></td></tr>`).join('')||'<tr><td colspan="6" class="empty">لا توجد تذاكر حتى الآن.</td></tr>'}
+function renderMessages(){let q=($('messageSearch')?.value||'').toLowerCase(),f=$('messageFilter')?.value||'all';let a=data.messages.filter(m=>(f==='all'||m.status===f)&&[m.sender,m.subject,m.body,m.contact].join(' ').toLowerCase().includes(q));$('messageRows').innerHTML=a.map(m=>`<tr><td><strong>${esc(m.sender)}</strong><div class="muted">${esc(m.contact||'')}</div></td><td>${esc(m.subject)}</td><td><div class="row-detail">${esc(m.body)}</div></td><td>${esc(m.date)}</td><td><select class="status-select ${m.status==='replied'?'completed':m.status==='read'?'progress':'incomplete'}" data-message-status="${esc(m.id)}"><option value="unread" ${m.status==='unread'?'selected':''}>غير مقروءة</option><option value="read" ${m.status==='read'?'selected':''}>مقروءة</option><option value="replied" ${m.status==='replied'?'selected':''}>تم الرد</option></select></td><td><button class="mini del" data-message-delete="${esc(m.id)}">حذف</button></td></tr>`).join('')||'<tr><td colspan="6" class="empty">صندوق الوارد فارغ.</td></tr>'}
+
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function showTab(t){document.querySelectorAll('[data-page]').forEach(x=>x.classList.toggle('hidden',x.dataset.page!==t));document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x.dataset.tab===t));$('pageTitle').textContent=({dashboard:'نظرة عامة',tickets:'التذاكر والدعم الفني',messages:'المراسلات',products:'المنتجات والخدمات',settings:'إعدادات الموقع',brand:'هوية الموقع',backup:'نسخ واستيراد'})[t]}
+function openEditor(p){editing=p?.id||null;$('modalTitle').textContent=p?'تعديل المنتج':'إضافة منتج جديد';$('pTitle').value=p?.title||'';$('pDesc').value=p?.description||'';$('pId').value=p?.id||'';$('pId').disabled=!!p;$('pBadge').value=p?.badge||'';$('pPrice').value=p?.priceLabel||'اطلب السعر';$('pImage').value=p?.image||'';$('pVisible').checked=p?.visible!==false;$('modal').classList.add('open')}
+function closeEditor(){$('modal').classList.remove('open');$('pId').disabled=false}
+function saveProduct(){let id=$('pId').value.trim(),title=$('pTitle').value.trim();if(!title||!cleanId(id)){toast('أدخل اسم المنتج ومعرّفاً إنجليزياً صحيحاً');return}let p={id,title,description:$('pDesc').value.trim(),badge:$('pBadge').value.trim(),priceLabel:$('pPrice').value.trim()||'اطلب السعر',image:$('pImage').value.trim()||null,visible:$('pVisible').checked};if(editing){let i=data.products.findIndex(x=>x.id===editing);if(i>=0)data.products[i]=p}else{if(data.products.some(x=>x.id===id)){toast('معرّف الخدمة مستخدم بالفعل');return}data.products.push(p)}persist();closeEditor();toast('تم حفظ المنتج. صدّر الملف لنشر التعديل.')}
+function exportData(){let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='amrx-store-data.json';a.click();URL.revokeObjectURL(a.href);toast('تم تنزيل ملف تحديث المتجر')}
+function importData(file){let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);if(!Array.isArray(d.products)||!d.settings)throw 0;data=d;persist();fillSettings();fillBrand();toast('تم استيراد النسخة الاحتياطية')}catch(e){toast('الملف غير صالح أو لا يطابق تنسيق AMR_X')}};r.readAsText(file)}
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));$('goProducts').onclick=()=>showTab('products');$('newFromHome').onclick=$('addProduct').onclick=()=>openEditor(null);$('saveProduct').onclick=saveProduct;$('cancelModal').onclick=closeEditor;$('modal').onclick=e=>{if(e.target===$('modal'))closeEditor()};$('search').oninput=render;$('productRows').onclick=e=>{let b=e.target.closest('button');if(!b)return;let p=data.products.find(x=>x.id===b.dataset.edit||x.id===b.dataset.toggle||x.id===b.dataset.delete);if(!p)return;if(b.dataset.edit)openEditor(p);if(b.dataset.toggle){p.visible=p.visible===false;persist();toast('تم تحديث حالة المنتج')}if(b.dataset.delete&&confirm('حذف المنتج '+p.title+'؟')){data.products=data.products.filter(x=>x.id!==p.id);persist();toast('تم حذف المنتج')}};
+$('saveSettings').onclick=()=>{let rate=Number($('rate').value),phone=$('phone').value.replace(/\D/g,'');if(!(rate>0)||phone.length<8){toast('تحقق من سعر الصرف ورقم واتساب');return}data.settings={storeName:$('storeName').value.trim(),description:$('description').value.trim(),rate,phone};persist();toast('تم حفظ الإعدادات. صدّر الملف لنشرها')};['exportTop','exportHome','exportBackup'].forEach(id=>$(id).onclick=exportData);$('importFile').onchange=e=>{if(e.target.files[0])importData(e.target.files[0]);e.target.value=''};
+function fillBrand(){let b=data.brandSettings||{};$('brandName').value=b.name||'AMR_X';$('brandTagline').value=b.tagline||'TECH • DIGITAL • SOLUTIONS';$('brandPrimary').value=b.primary||'#12377f';$('brandAccent').value=b.accent||'#f59a19';$('brandLogo').value=b.logo||'';previewBrand()}
+function previewBrand(){let b={name:$('brandName').value||'AMR_X',tagline:$('brandTagline').value||'',primary:$('brandPrimary').value,accent:$('brandAccent').value};$('brandPreview').style.background=`linear-gradient(135deg,${b.primary},#174b9b)`;$('brandPreview').querySelector('strong').innerHTML=esc(b.name).replace('_','<span>_</span>');$('brandPreview').querySelector('small').textContent=b.tagline}
+['brandName','brandTagline','brandPrimary','brandAccent'].forEach(id=>$(id).addEventListener('input',previewBrand));$('saveBrand').onclick=()=>{data.brandSettings={name:$('brandName').value.trim()||'AMR_X',tagline:$('brandTagline').value.trim(),primary:$('brandPrimary').value,accent:$('brandAccent').value,logo:$('brandLogo').value.trim()};persist();toast('تم حفظ هوية الموقع. صدّر ملف البيانات لحفظ نسخة التحديث')};
+$('addTicket').onclick=()=>$('ticketModal').classList.add('open');$('closeTicket').onclick=()=>$('ticketModal').classList.remove('open');$('saveTicket').onclick=()=>{let customer=$('tCustomer').value.trim(),subject=$('tSubject').value.trim();if(!customer||!subject){toast('أدخل اسم العميل وموضوع التذكرة');return}data.tickets.unshift({id:'AX-'+Date.now().toString().slice(-7),customer,contact:$('tContact').value.trim(),subject,details:$('tDetails').value.trim(),status:$('tStatus').value,date:new Date().toLocaleDateString('ar-EG')});['tCustomer','tContact','tSubject','tDetails'].forEach(id=>$(id).value='');$('ticketModal').classList.remove('open');persist();toast('تمت إضافة التذكرة')};
+$('addMessage').onclick=()=>$('messageModal').classList.add('open');$('closeMessage').onclick=()=>$('messageModal').classList.remove('open');$('saveMessage').onclick=()=>{let sender=$('mSender').value.trim(),subject=$('mSubject').value.trim(),body=$('mBody').value.trim();if(!sender||!subject||!body){toast('أكمل اسم المرسل والموضوع والرسالة');return}data.messages.unshift({id:'MSG-'+Date.now(),sender,contact:$('mContact').value.trim(),subject,body,status:$('mStatus').value,date:new Date().toLocaleDateString('ar-EG')});['mSender','mContact','mSubject','mBody'].forEach(id=>$(id).value='');$('messageModal').classList.remove('open');persist();toast('تمت إضافة المراسلة')};
+$('ticketSearch').oninput=renderTickets;$('ticketFilter').onchange=renderTickets;$('messageSearch').oninput=renderMessages;$('messageFilter').onchange=renderMessages;
+document.addEventListener('change',e=>{let el=e.target;if(el.dataset.ticketStatus){let t=data.tickets.find(x=>x.id===el.dataset.ticketStatus);if(t){t.status=el.value;persist();toast('تم تحديث حالة التذكرة')}}if(el.dataset.messageStatus){let m=data.messages.find(x=>x.id===el.dataset.messageStatus);if(m){m.status=el.value;persist();toast('تم تحديث حالة المراسلة')}}});
+document.addEventListener('click',e=>{let el=e.target;if(el.dataset.ticketDelete){data.tickets=data.tickets.filter(t=>t.id!==el.dataset.ticketDelete);persist();toast('تم حذف التذكرة')}if(el.dataset.messageDelete){data.messages=data.messages.filter(m=>m.id!==el.dataset.messageDelete);persist();toast('تم حذف المراسلة')}});
+load();
+</script></body></html>
