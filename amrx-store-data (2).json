@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "brand": "AMR_X",
+  "settings": {
+    "storeName": "متجر أبو عمار الرقمي",
+    "description": "خدمات رقمية واشتراكات وحلول برمجية",
+    "rate": 12500,
+    "phone": "249961270800"
+  },
+  "products": [
+    {
+      "id": "ad_bybit",
+      "title": "فيزا باي بيت Bybit",
+      "description": "بطاقة وخدمات Bybit",
+      "badge": "",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_bein_check",
+      "title": "فحص كرت beIN Sports السوداني",
+      "description": "خدمة فحص الاشتراك والكرت",
+      "badge": "",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_linkedin_3",
+      "title": "اشتراك LinkedIn Premium",
+      "description": "اشتراك 3 شهور · خصم 75%",
+      "badge": "خصم 75%",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_chatgpt_pro",
+      "title": "اشتراك ChatGPT Pro",
+      "description": "اشتراك شهر · خصم يصل إلى 90% حسب العرض",
+      "badge": "عرض خاص",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_telegram",
+      "title": "تفعيل تيليجرام في السودان",
+      "description": "تفعيل ومساعدة في خدمات تيليجرام",
+      "badge": "",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_redotpay_card",
+      "title": "بطاقة افتراضية RedotPay",
+      "description": "إصدار بطاقة افتراضية",
+      "badge": "",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_pyypl",
+      "title": "شحن فيزا Pyypl",
+      "description": "شحن رصيد بطاقة Pyypl",
+      "badge": "",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_binance",
+      "title": "شحن Binance",
+      "description": "شحن رصيد وخدمات Binance",
+      "badge": "",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_redotpay",
+      "title": "شحن فيزا RedotPay",
+      "description": "شحن رصيد RedotPay",
+      "badge": "",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_perplexity",
+      "title": "اشتراك Perplexity Pro",
+      "description": "اشتراك Pro · خصم 50% حسب العرض",
+      "badge": "خصم 50%",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_nordvpn",
+      "title": "اشتراك NordVPN",
+      "description": "اشتراك لمدة 3 شهور",
+      "badge": "3 شهور",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_bein_6",
+      "title": "اشتراك beIN Sports 6",
+      "description": "اشتراك لمدة 6 شهور",
+      "badge": "6 شهور",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_bein_3",
+      "title": "اشتراك beIN Sports 3",
+      "description": "اشتراك لمدة 3 شهور",
+      "badge": "3 شهور",
+      "priceLabel": "اطلب السعر",
+      "image": null,
+      "visible": true
+    },
+    {
+      "id": "ad_gemini_nano",
+      "title": "اشتراك Gemini Pro Nano",
+      "description": "باقة Gemini Pro Nano والخدمات المرفقة بالإعلان",
+      "badge": "",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_chatgpt_plus",
+      "title": "اشتراك ChatGPT Plus",
+      "description": "اشتراك لمدة شهر",
+      "badge": "شهر",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_gemini_ultra",
+      "title": "اشتراك Gemini AI Ultra",
+      "description": "اشتراك لمدة شهر",
+      "badge": "شهر",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_bein_12",
+      "title": "اشتراك beIN Sports 12",
+      "description": "اشتراك لمدة 12 شهر",
+      "badge": "12 شهر",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "ad_linkedin_1",
+      "title": "اشتراك LinkedIn Premium",
+      "description": "اشتراك لمدة شهر",
+      "badge": "شهر",
+      "priceLabel": "اطلب السعر",
+      "visible": true,
+      "image": null
+    }
+  ],
+  "tickets": [],
+  "messages": [],
+  "brandSettings": {
+    "name": "AMR_X",
+    "tagline": "TECH • DIGITAL • SOLUTIONS",
+    "primary": "#12377f",
+    "accent": "#f59a19",
+    "logo": ""
+  }
+}
